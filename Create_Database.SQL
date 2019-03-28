@@ -1,0 +1,17 @@
+DROP DATABASE IF EXISTS parkingdb;
+CREATE DATABASE IF NOT EXISTS parkingdb;
+USE parkingdb;
+
+DROP TABLE IF EXISTS parkingdb.parkinfo;
+CREATE TABLE IF NOT EXISTS parkingdb.parkinfo (
+parkID      INT UNSIGNED   NOT NULL,
+name        VARCHAR(80)    NOT NULL DEFAULT '',
+nature      VARCHAR(30)    NOT NULL DEFAULT '',
+motorCycle  INT UNSIGNED   NOT NULL,
+coach  INT UNSIGNED   NOT NULL,
+HGV  INT UNSIGNED   NOT NULL,
+LGV  INT UNSIGNED   NOT NULL,
+privateCar  INT UNSIGNED   NOT NULL,
+coordinates VARCHAR(40)    NOT NULL DEFAULT '',
+PRIMARY KEY (parkID)
+);
